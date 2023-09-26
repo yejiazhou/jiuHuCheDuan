@@ -2,48 +2,9 @@
 <!-- eslint-disable -->
   <el-row style='padding: 0 10px 0px 30px;height: 100vh;background: #efefef;' >
     <el-col :md='{span: 18}' :sm='{span: 24}'>
-      <!-- <Inputs/> -->
-      <!-- <Device @switchDevice='switchDevice'/> -->
-      <!-- <h1 style='font-size: 14px;font-weight: 500'>{{ t('operation') }}</h1> -->
-      <!-- <div class='btn-line'>
-        <el-button type='primary' @click='handleJoin'>
-          Join Room
-        </el-button>
-        <el-button type='primary' @click='handlePublish'>
-          Publish
-        </el-button>
-        <el-button type='primary' @click='handleUnpublish'>
-          Unpublish
-        </el-button>
-        <el-button type='primary' @click='handleLeave'>
-          Leave Room
-        </el-button>
-      </div> -->
-      <!-- <div class='btn-line'>
-        <el-button type='primary' @click='handleStartShare'>Start Share Screen</el-button>
-        <el-button type='primary' @click='handleStopShare'>Stop Share Screen</el-button>
-      </div> -->
-      <!-- <div class='share-link' v-if='store.isJoined'>
-        <div class='alert'>{{ t('invite') }}</div>
-        <div class='invite'>
-          <button class="invite-btn" @click='copy'>
-            <img src="../assets/clippy.svg" alt="Copy to clipboard" class='clip'>
-          </button>
-          <el-input id="foo" v-model="inviteLink"></el-input>
-        </div>
-      </div> -->
       <div class='pusher'>
-        <!-- <div class='local' id='local' v-if='store.isJoined'>
-          <div class='tag'>
-            <div :class="audioMuted ? 'muteAudio' :'unmuteAudio'" @click='muteAudio'></div>
-            <div :class="videoMuted ? 'muteVideo' :'unmuteVideo'" @click='muteVideo'></div>
-          </div>
-        </div> -->
       </div>
         <Player @doSth="handleLeave"/>
-      
-<!-- {{store.remoteStreams}} -->
-       <!-- <button @click="handleLeave">挂断</button> -->
     </el-col>
   </el-row>
 </template>

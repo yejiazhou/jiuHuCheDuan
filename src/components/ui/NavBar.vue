@@ -1,11 +1,11 @@
-<!-- eslint-disable max-len -->
+<!-- eslint-disable -->
 <template>
   <div class='text-white header'>
     <span class="headLogoClass">
       <img src="../../assets/image/tupian.png" alt="TRTC" style='height: 100%;width:100%'/>
     </span>
     <span class="textClass">
-      第一医院调度中心控制台
+        救护车控制台 
     </span>
   </div>
 </template>

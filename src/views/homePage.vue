@@ -87,7 +87,7 @@ let onMessageReceived = function(event) {
       // console.log('文本消息',event.data);
       // whetherFirstAidOrNnot.value = true
 
-      if(JSON.parse(event?.data[0].payload.text).data=='咨询医院是否接听'){
+      if(JSON.parse(event?.data[0].payload.text).data=='咨询救护车是否接听'){
           whetherFirstAidOrNnot.value = true
       }else{
           roomId.value = JSON.parse(event?.data[0].payload.text).data
@@ -151,17 +151,17 @@ let onMessageReceived = function(event) {
 // sound.play();  
 chat.on(TencentCloudChat.EVENT.MESSAGE_RECEIVED, onMessageReceived);
 // 开始登录
-chat.login({userID: '1434048604853321730', userSig: 'eJw9TssKgkAU-ZfZFnKduTOOQptA6QWC5qJlMFNcxRzMTIj*PdNocRbnyXmx4yH37OCotSzyJSqpAJaT2tuWRYx7wGZ*N9XZOTJjDgGEVlrL2SFjbx1daCr4KBBQqxFSCO4H4j9A19FPmrh8FvmjCdMqHeIM3anj5WJng7IHWteIVRLvs63aFKtfsaP6*06FKEEEXL8-OuwzAQ__'});
+chat.login({userID: '1352902597856288770', userSig: 'eJw9jksLgkAUhf-LbA27jjPjHaFN0GwMCpJcS45ye2GO2Yv*e6bR8jy*w3mxdLnx7b2mxrI4kEJJBTAZ3M42LGbcBzZqVxzyuqai7wmAEBWiHBMq7LmlkgYgCCXXwKWOUCqOGEX-Aar6XExT4yq4oLvlkInr-JjJvTF217k1eYEy26dnVi5JHovZD2zp9H2nMORKay7eHy7XMwE_'});
 
-// 医院到120
+// 救护车到医院
 const send=()=> {
 let message = chat.createTextMessage({
-  to: '1434048604182233090',
+  to: '1434048604853321730',
   conversationType: TencentCloudChat.TYPES.CONV_C2C,
   // 消息优先级，用于群聊。如果某个群的消息超过了频率限制，后台会优先下发高优先级的消息
   // priority: TencentCloudChat.TYPES.MSG_PRIORITY_NORMAL,
   payload: {
-    text: JSON.stringify({"messageType":902,"data":"医院收到消息"})
+    text: JSON.stringify({"messageType":903,"data":"救护车收到消息"})
   },
   // 如果您发消息需要已读回执，需购买旗舰版套餐，并且创建消息时将 needReadReceipt 设置为 true
   needReadReceipt: true
